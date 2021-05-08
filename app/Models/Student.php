@@ -7,8 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Student extends Model
 {
+    //diisi field mana saja yang boleh diisi
+    protected $fillable = ['nama', 'nrp', 'email', 'jurusan'];
 
-
-    // jika nama model berbeda dengan nama tabel yang dirujuk
-    // protected $table = 'mahasiswa';
+    //diisi fielad mana yang tidak boleh diisi
+    // protected $guarded = ['nama', 'nrp', 'email', 'jurusan'];
 }
