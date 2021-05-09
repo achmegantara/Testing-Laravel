@@ -30,8 +30,12 @@ Route::get('/about', [PagesController::class, 'about']);
 Route::get('/mahasiswa', [MahasiswaController::class, 'index']);
 
 //students
-Route::get('/students', [StudentsController::class, 'index']);
-Route::get('/students/create', [StudentsController::class, 'create']);
-Route::get('/students/{student}', [StudentsController::class, 'show']);
-Route::post('/students', [StudentsController::class, 'store']);
-Route::delete('/students/{student}', [StudentsController::class, 'destroy']);
+// Route::get('/students', [StudentsController::class, 'index']);
+// Route::get('/students/create', [StudentsController::class, 'create']);
+// Route::get('/students/{student}', [StudentsController::class, 'show']);
+// Route::post('/students', [StudentsController::class, 'store']);
+// Route::delete('/students/{student}', [StudentsController::class, 'destroy']);
+// Route::get('/students/{student}/edit', [StudentsController::class, 'edit']);
+// route::put('/students/{student}', [StudentsController::class, 'update']);
+
+Route::resource('students', StudentsController::class);
